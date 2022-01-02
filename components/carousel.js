@@ -1,68 +1,81 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { CarouselCaption, CarouselControl, CarouselIndicators, CarouselItem } from "reactstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import Image from "next/image";
+import img1 from "../public/img/img-1.jpg";
+import img2 from "../public/img/img-2.jpg";
+import img3 from "../public/img/img-3.jpg";
 
 const Carousel = () => (
-  <Carousel
-    activeIndex={0}
-    dark
-    next={function noRefCheck() {}}
-    previous={function noRefCheck() {}}
-  >
-    <CarouselIndicators
-      activeIndex={0}
-      items={[
-        {
-          altText: "Slide 1",
-          caption: "Slide 1",
-          key: 1,
-          src: "../img/img-1",
-        },
-        {
-          altText: "Slide 2",
-          caption: "Slide 2",
-          key: 2,
-          src: "../img/img-2",
-        },
-        {
-          altText: "Slide 3",
-          caption: "Slide 3",
-          key: 3,
-          src: "../img/img-3",
-        },
-      ]}
-      onClickHandler={function noRefCheck() {}}
-    />
-    <CarouselItem
-      onExited={function noRefCheck() {}}
-      onExiting={function noRefCheck() {}}
+  
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
     >
-      <img alt="Slide 1" src="../img/img-1" />
-      <CarouselCaption captionHeader="Slide 1" captionText="Slide 1" />
-    </CarouselItem>
-    <CarouselItem
-      onExited={function noRefCheck() {}}
-      onExiting={function noRefCheck() {}}
-    >
-      <img alt="Slide 2" src="../img/img-2" />
-      <CarouselCaption captionHeader="Slide 2" captionText="Slide 2" />
-    </CarouselItem>
-    <CarouselItem
-      onExited={function noRefCheck() {}}
-      onExiting={function noRefCheck() {}}
-    >
-      <img alt="Slide 3" src="../img/img-3" />
-      <CarouselCaption captionHeader="Slide 3" captionText="Slide 3" />
-    </CarouselItem>
-    <CarouselControl
-      direction="prev"
-      directionText="Previous"
-      onClickHandler={function noRefCheck() {}}
-    />
-    <CarouselControl
-      direction="next"
-      directionText="Next"
-      onClickHandler={function noRefCheck() {}}
-    />
-  </Carousel>
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <Image src={img1} className="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <Image src={img2} className="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <Image src={img3} className="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+ 
 );
-export default Carousel
+export default Carousel;
