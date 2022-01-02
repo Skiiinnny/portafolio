@@ -1,7 +1,8 @@
-import Paper from '@mui/material/Paper';
-import Stack from '@mui/material/Stack';
-import { styled } from '@mui/material/styles';
+import Paper from "@mui/material/Paper";
+import Stack from "@mui/material/Stack";
+import { styled } from "@mui/material/styles";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ListaHabilidades from "../components/ListaHabilidades";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -25,7 +26,7 @@ const Panel = () => (
             aria-controls="home"
             aria-selected="true"
           >
-            Habilidades laborales
+            Habilidades Principales
           </button>
         </li>
         <li class="nav-item" role="presentation">
@@ -39,7 +40,7 @@ const Panel = () => (
             aria-controls="profile"
             aria-selected="false"
           >
-             Habilidades blandas
+            Habilidades Secundarias
           </button>
         </li>
         <li class="nav-item" role="presentation">
@@ -65,12 +66,14 @@ const Panel = () => (
         role="tabpanel"
         aria-labelledby="home-tab"
       >
-        <Stack direction="row" alignItems="center" justifyContent="center" spacing={2}>
-          <Item>1</Item>
-          <Item>2</Item>
-
-          <Item>3</Item>
-
+        <Stack
+          direction={{ xs: "column", sm: "row" }}
+          spacing={{ xs: 1, sm: 2, md: 4 }}
+        >
+          <Item sx={{width: "100%"}}>
+            <ListaHabilidades />
+          </Item>
+        
         </Stack>
       </div>
       <div
