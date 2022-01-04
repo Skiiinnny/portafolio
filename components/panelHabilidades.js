@@ -2,7 +2,8 @@ import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ListaHabilidades from "../components/ListaHabilidades";
+import HabilidadesPrincipales from "../components/HabilidadesPrincipales";
+import MarcosYLibrerias from "./frwkYLib";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -14,44 +15,47 @@ const Item = styled(Paper)(({ theme }) => ({
 const Panel = () => (
   <div className="card my-4">
     <div className="card-header">
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <ul class="nav nav-tabs" id="panelHabilidades" role="tablist">
+
         <li class="nav-item" role="presentation">
           <button
             class="nav-link active"
-            id="home-tab"
+            id="tab-principal"
             data-bs-toggle="tab"
-            data-bs-target="#home"
+            data-bs-target="#principal"
             type="button"
             role="tab"
-            aria-controls="home"
+            aria-controls="principal"
             aria-selected="true"
           >
-            Habilidades Principales
+            Lenguajes
           </button>
         </li>
+
         <li class="nav-item" role="presentation">
           <button
             class="nav-link"
-            id="profile-tab"
+            id="tab-secundarias"
             data-bs-toggle="tab"
-            data-bs-target="#profile"
+            data-bs-target="#secundarias"
             type="button"
             role="tab"
-            aria-controls="profile"
+            aria-controls="secundarias"
             aria-selected="false"
           >
-            Habilidades Secundarias
+            Marcos de trabajo y Librerias
           </button>
         </li>
+
         <li class="nav-item" role="presentation">
           <button
             class="nav-link"
-            id="contact-tab"
+            id="tab-otras"
             data-bs-toggle="tab"
-            data-bs-target="#contact"
+            data-bs-target="#otras"
             type="button"
             role="tab"
-            aria-controls="contact"
+            aria-controls="otras"
             aria-selected="false"
           >
             Otras Caracteristicas
@@ -62,33 +66,41 @@ const Panel = () => (
     <div class="tab-content" id="myTabContent">
       <div
         class="tab-pane fade show active"
-        id="home"
+        id="principal"
         role="tabpanel"
-        aria-labelledby="home-tab"
+        aria-labelledby="tab-principal"
       >
         <Stack
           direction={{ xs: "column", sm: "row" }}
           spacing={{ xs: 1, sm: 2, md: 4 }}
         >
           <Item sx={{width: "100%"}}>
-            <ListaHabilidades />
+            <HabilidadesPrincipales />
           </Item>
         
         </Stack>
       </div>
       <div
         class="tab-pane fade"
-        id="profile"
+        id="secundarias"
         role="tabpanel"
-        aria-labelledby="profile-tab"
+        aria-labelledby="tab-secundarias"
       >
-        Habilidades blandas
+         <Stack
+          direction={{ xs: "column", sm: "row" }}
+          spacing={{ xs: 1, sm: 2, md: 4 }}
+        >
+          <Item sx={{width: "100%"}}>
+            <MarcosYLibrerias />
+          </Item>
+        
+        </Stack>
       </div>
       <div
         class="tab-pane fade"
-        id="contact"
+        id="otras"
         role="tabpanel"
-        aria-labelledby="contact-tab"
+        aria-labelledby="tab-otras"
       >
         Otras Caracteristicas
       </div>
