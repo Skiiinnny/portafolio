@@ -1,8 +1,8 @@
 import Navbar from "../components/navbar";
 const Layout = ({ children }) => (
-  <>
+  < >
     <Navbar />
-    <main className="container  py-4">{children}</main>
+    <main className="container  py-4 " >{children}</main>
 
    
 

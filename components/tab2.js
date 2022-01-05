@@ -10,11 +10,12 @@ import CssIcon from "@mui/icons-material/Css";
 import JavascriptIcon from "@mui/icons-material/Javascript";
 import CodeIcon from "@mui/icons-material/Code";
 import StorageIcon from "@mui/icons-material/Storage";
-// Componentes 
+// Componentes
 import BarraIntermedio from "./barraIntermedio";
 import BarraBasico from "./barraBasico";
-
-export default function HabilidadesPrincipales() {
+// Colores 
+import { blue } from "@mui/material/colors";
+export default function MarcosYLibrerias() {
   return (
     <List
       sx={{
@@ -23,88 +24,108 @@ export default function HabilidadesPrincipales() {
         gridTemplateColumns: "repeat(2, 1fr)",
       }}
     >
-      {/* ITEM HTML */}
+      {/* ITEM REACT */}
       <ListItem>
         <ListItemAvatar>
-          <Avatar>
-            <HtmlIcon />
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText
-          primary="HTML5"
-          secondary="Intermedio"
-          sx={{ width: "25%" }}
-        />
-        <BarraIntermedio />
-      </ListItem>
-      {/* ITEM CSS */}
-      <ListItem>
-        <ListItemAvatar>
-          <Avatar>
-            <CssIcon />
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText
-          primary="CSS3"
-          secondary="Intermedio"
-          sx={{ width: "25%" }}
-        />
-        <BarraIntermedio />
-      </ListItem>
-      {/* ITEM JAVASCRIPT  */}
-      <ListItem>
-        <ListItemAvatar>
-          <Avatar>
+          <Avatar sx={{ bgcolor: blue[500] }}>
             <JavascriptIcon />
           </Avatar>
         </ListItemAvatar>
         <ListItemText
-          primary="Javascript"
+          primary="ReactJs"
           secondary="Basico"
           sx={{ width: "25%" }}
         />
         <BarraBasico />
       </ListItem>
-      {/* ITEM PYTHON  */}
+      {/* ITEM JQUERY */}
       <ListItem>
         <ListItemAvatar>
-          <Avatar>
-            <CodeIcon />
+          <Avatar sx={{ bgcolor: blue[500] }}>
+            <JavascriptIcon />
           </Avatar>
         </ListItemAvatar>
         <ListItemText
-          primary="Python"
+          primary="Jquery"
+          secondary="Basico"
+          sx={{ width: "25%" }}
+        />
+        <BarraBasico />
+      </ListItem>
+      {/* ITEM BOOTSTRAP  */}
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar sx={{ bgcolor: blue[500] }}>
+            <CssIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText
+          primary="Bootstrap"
           secondary="Intermedio"
           sx={{ width: "25%" }}
         />
         <BarraIntermedio />
       </ListItem>
-      {/* ITEM MYSQL  */}
+      {/* ITEM DJANGO  */}
       <ListItem>
         <ListItemAvatar>
-          <Avatar>
-            <StorageIcon />
+          <Avatar sx={{ bgcolor: blue[500] }}>
+            <CodeIcon />
           </Avatar>
         </ListItemAvatar>
         <ListItemText
-          primary="MySql"
+          primary="Django"
+          secondary="Intermedio"
+          sx={{ width: "25%" }}
+        />
+        <BarraIntermedio />
+      </ListItem>
+      {/* ITEM LARAVEL  */}
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar sx={{ bgcolor: blue[500] }}>
+            <CodeIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText
+          primary="Laravel"
           secondary="Basico"
           sx={{ width: "25%" }}
         />
         <BarraBasico />
       </ListItem>
-      {/* ITEM PHP  */}
+      {/* ITEM NEXTJS  */}
       <ListItem>
         <ListItemAvatar>
-          <Avatar>
-            <CodeIcon />
+          <Avatar sx={{ bgcolor: blue[500] }}>
+            <JavascriptIcon />
           </Avatar>
         </ListItemAvatar>
         <ListItemText
-          primary="Php"
+          primary="Next.js"
           secondary="Basico"
           sx={{ width: "25%" }}
         />
+        <BarraBasico />
+      </ListItem>
+      {/* ITEM VUE  */}
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar sx={{ bgcolor: blue[500] }}>
+            <JavascriptIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Vue" secondary="Basico" sx={{ width: "25%" }} />
+        <BarraBasico />
+      </ListItem>
+      {/* ITEM IONIC  */}
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar sx={{ bgcolor: blue[500] }}>
+            <CodeIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Ionic" secondary="Basico" sx={{ width: "25%" }} />
         <BarraBasico />
       </ListItem>
     </List>
