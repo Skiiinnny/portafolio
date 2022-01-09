@@ -18,11 +18,13 @@ import { blue } from "@mui/material/colors";
 
 export default function HabilidadesPrincipales() {
   return (
-    <List
+    <List 
       sx={{
         display: "grid",
         gap: 1,
         gridTemplateColumns: "repeat(2, 1fr)",
+        
+       
       }}
     >
       {/* ITEM HTML */}

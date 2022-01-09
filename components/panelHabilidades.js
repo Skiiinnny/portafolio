@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import HabilidadesPrincipales from "./tab1";
 import MarcosYLibrerias from "./tab2";
 import OtrasHabilidades from "./tab3";
-import { blue } from "@mui/material/colors";
+import { indigo } from "@mui/material/colors";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -15,7 +15,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const Panel = () => (
-  <div className="card my-4">
+  <div className="card my-4  tabla-1">
     <div className="card-header ">
       <ul className="nav nav-tabs " id="panelHabilidades" role="tablist">
 
@@ -77,8 +77,8 @@ const Panel = () => (
           direction={{ xs: "column", sm: "row" }}
           spacing={{ xs: 1, sm: 2, md: 4 }}
         >
-          <Item sx={{width: "100%"}}>
-            <HabilidadesPrincipales />
+          <Item sx={{width: "100%", bgcolor:indigo[50]}}>
+            <HabilidadesPrincipales  />
           </Item>
         
         </Stack>
@@ -93,7 +93,7 @@ const Panel = () => (
           direction={{ xs: "column", sm: "row" }}
           spacing={{ xs: 1, sm: 2, md: 4 }}
         >
-          <Item sx={{width: "100%"}}>
+          <Item sx={{width: "100%", bgcolor:indigo[50]}}>
             <MarcosYLibrerias />
           </Item>
         
@@ -109,7 +109,7 @@ const Panel = () => (
           direction={{ xs: "column", sm: "row" }}
           spacing={{ xs: 1, sm: 2, md: 4 }}
         >
-          <Item sx={{width: "100%"}}>
+          <Item sx={{width: "100%", bgcolor:indigo[50]}}>
             <OtrasHabilidades />
           </Item>
         
