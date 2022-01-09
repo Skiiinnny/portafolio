@@ -17,12 +17,12 @@ const Item = styled(Paper)(({ theme }) => ({
 const Panel = () => (
   <div className="card my-4">
     <div className="card-header ">
-      <ul class="nav nav-tabs " id="panelHabilidades" role="tablist">
+      <ul className="nav nav-tabs " id="panelHabilidades" role="tablist">
 
-        <li  class="nav-item " role="presentation">
+        <li  className="nav-item " role="presentation">
           <button
             
-            class="nav-link text-info"
+            className="nav-link text-info"
             id="tab-principal"
             data-bs-toggle="tab"
             data-bs-target="#principal"
@@ -35,9 +35,9 @@ const Panel = () => (
           </button>
         </li>
 
-        <li class="nav-item" role="presentation">
+        <li className="nav-item" role="presentation">
           <button
-            class="nav-link text-info"
+            className="nav-link text-info"
             id="tab-secundarias"
             data-bs-toggle="tab"
             data-bs-target="#secundarias"
@@ -50,9 +50,9 @@ const Panel = () => (
           </button>
         </li>
 
-        <li class="nav-item" role="presentation">
+        <li className="nav-item" role="presentation">
           <button
-            class="nav-link text-info"
+            className="nav-link text-info"
             id="tab-otras"
             data-bs-toggle="tab"
             data-bs-target="#otras"
@@ -66,9 +66,9 @@ const Panel = () => (
         </li>
       </ul>
     </div>
-    <div class="tab-content" id="myTabContent">
+    <div className="tab-content" id="myTabContent">
       <div
-        class="tab-pane fade show active"
+        className="tab-pane fade show active"
         id="principal"
         role="tabpanel"
         aria-labelledby="tab-principal"
@@ -84,7 +84,7 @@ const Panel = () => (
         </Stack>
       </div>
       <div
-        class="tab-pane fade"
+        className="tab-pane fade"
         id="secundarias"
         role="tabpanel"
         aria-labelledby="tab-secundarias"
@@ -100,7 +100,7 @@ const Panel = () => (
         </Stack>
       </div>
       <div
-        class="tab-pane fade"
+        className="tab-pane fade"
         id="otras"
         role="tabpanel"
         aria-labelledby="tab-otras"

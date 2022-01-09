@@ -1,9 +1,9 @@
 import Layout from "../components/layout";
-import BasicCard from "../components/panelInfoPersonal"
+import InfoPersonal from "../components/panelInfoPersonal"
 const SobreMi = () =>(
 
 <Layout>
-  <BasicCard/>
+  <InfoPersonal/>
 </Layout>)
 export default SobreMi;
 
